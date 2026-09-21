@@ -22,6 +22,7 @@
 html, body, #root { width: 100%; min-width: 320px; min-height: 100%; margin: 0; }
 body { min-height: 100vh; background: var(--bg); }
 #root { min-height: 100svh; }
+body { overflow-x: hidden; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: var(--heading); color: var(--text-h); }
 button, input, select, textarea { font: inherit; }
@@ -48,4 +49,22 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   .sidebar-logo,.attendance-logo,.progress-logo,.assignment-logo,.quiz-logo,.teacher-logo,.admin-logo,.staff-logo,.permissions-logo { padding-right: 38px !important; }
   .dashboard-topbar,.assignment-topbar,.attendance-topbar,.progress-topbar,.quiz-topbar,.teacher-topbar,.admin-topbar,.staff-topbar,.permissions-topbar { align-items: flex-start; flex-wrap: wrap; gap: 12px; }
   .breadcrumb,.assignment-breadcrumb,.attendance-breadcrumb,.progress-breadcrumb,.quiz-breadcrumb,.teacher-breadcrumb,.admin-breadcrumb,.staff-breadcrumb,.permissions-breadcrumb { min-width: 0; line-height: 1.5; }
+
+  .dashboard-main-content,.assignment-main,.attendance-main,.progress-main,.quiz-main,.teacher-main,.admin-main,.staff-academic-main,.permissions-main { width: 100%; min-width: 0; padding: 18px 12px; overflow-x: hidden; }
+  .dashboard-grid,.teacher-cards,.admin-cards { grid-template-columns: minmax(0, 1fr) !important; }
+  .content-panel,.teacher-panel,.admin-panel,.assignment-panel,.attendance-panel,.progress-panel,.quiz-panel,.staff-academic-panel,.permissions-panel { max-width: 100%; min-width: 0; overflow-x: auto; }
+  .panel-heading,.teacher-panel-header,.admin-panel-header { align-items: flex-start; flex-wrap: wrap; }
+  .analytics-chart,.performance-chart { gap: 6px; overflow-x: auto; padding-inline: 2px; }
+  .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 9px; }
+  .stat-card { min-width: 0; padding: 12px 10px; }
+  .course-banner,.course-progress-bar-wrap { align-items: flex-start; flex-wrap: wrap; }
+  .course-progress-bar-wrap .progress-bar-track { min-width: 120px; }
+  table { display: block; max-width: 100%; overflow-x: auto; white-space: nowrap; }
+  img, svg, video, canvas { max-width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .stats-row { grid-template-columns: 1fr !important; }
+  .dashboard-topbar,.assignment-topbar,.attendance-topbar,.progress-topbar,.quiz-topbar,.teacher-topbar,.admin-topbar,.staff-topbar,.permissions-topbar { flex-direction: column; }
+  .feedback-btn,.teacher-feedback,.admin-feedback { align-self: stretch; }
 }

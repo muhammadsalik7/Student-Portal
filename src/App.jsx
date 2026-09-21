@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import LoginPortal from './Components/LoginPortal.jsx';
 import StudentDashboard from './Components/StudentPortal/StudentDashboard.jsx';
 import Progress from './Components/StudentPortal/Progress.jsx';
@@ -16,8 +16,28 @@ import AdminQuiz from './Components/Admin/AdminQuiz.jsx';
 import AdminUsers from './Components/Admin/AdminUsers.jsx';
 
 export default function App() {
-  const [session, setSession] = useState({ isLoggedIn: false, userRole: null, userId: null });
+  const [session, setSession] = useState(() => {
+    try {
+      const savedSession = window.localStorage.getItem('student-portal-session');
+      const parsedSession = savedSession ? JSON.parse(savedSession) : null;
+      if (parsedSession?.isLoggedIn && ['student', 'teacher', 'admin'].includes(parsedSession.userRole)) {
+        return parsedSession;
+      }
+    } catch {
+      window.localStorage.removeItem('student-portal-session');
+    }
+
+    return { isLoggedIn: false, userRole: null, userId: null };
+  });
   const [currentPage, setCurrentPage] = useState('Dashboard');
+
+  useEffect(() => {
+    if (session.isLoggedIn) {
+      window.localStorage.setItem('student-portal-session', JSON.stringify(session));
+    } else {
+      window.localStorage.removeItem('student-portal-session');
+    }
+  }, [session]);
 
   const handleLoginSuccess = (role, userId) => {
     const normalizedRole = ['student', 'teacher', 'admin'].includes(role) ? role : 'student';

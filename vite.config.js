@@ -5,7 +5,7 @@ import reactCompiler from 'babel-plugin-react-compiler'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/repo-name/', // <--- Yahan apni GitHub repo ka naam likhein (jaise '/student-portal/')
+  base: '/Student-Portal-/',
   plugins: [
     react(),
     babel({ 
