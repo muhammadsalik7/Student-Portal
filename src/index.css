@@ -1,0 +1,51 @@
+:root {
+  --text: #6b778b;
+  --text-h: #172033;
+  --bg: #f5f7fb;
+  --border: #e5ebf2;
+  --accent: #1d9e9d;
+  --accent-bg: rgba(29, 158, 157, .1);
+  --accent-border: rgba(29, 158, 157, .35);
+  --shadow: 0 18px 45px rgba(25, 45, 75, .12);
+  --sans: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --heading: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font: 16px/1.45 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { width: 100%; min-width: 320px; min-height: 100%; margin: 0; }
+body { min-height: 100vh; background: var(--bg); }
+#root { min-height: 100svh; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: var(--heading); color: var(--text-h); }
+button, input, select, textarea { font: inherit; }
+button { transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease; }
+button:not(:disabled):active { transform: translateY(1px); }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(54, 173, 145, .3); outline-offset: 2px; }
+
+/* Keep the collapse control beside the brand on every portal shell. */
+.sidebar-collapse-btn,.attendance-collapse,.progress-collapse,.assignment-collapse,.quiz-collapse,.teacher-collapse,.admin-collapse,.staff-collapse,.permissions-collapse { top: 28px !important; right: 8px !important; left: auto !important; }
+.sidebar-logo,.attendance-logo,.progress-logo,.assignment-logo,.quiz-logo,.teacher-logo,.admin-logo,.staff-logo,.permissions-logo { padding-right: 38px !important; }
+
+@media (max-width: 900px) {
+  .dashboard-main-content,.assignment-main,.attendance-main,.progress-main,.quiz-main,.teacher-main,.admin-main,.staff-academic-main,.permissions-main { padding: 22px 18px; }
+}
+
+@media (max-width: 700px) {
+  .smit-dashboard-wrapper,.assignment-page,.attendance-page,.progress-page,.quiz-page,.teacher-page,.admin-page,.staff-academic-page,.staff-permissions-page { display: block; }
+  .smit-sidebar,.assignment-sidebar,.attendance-sidebar,.progress-sidebar,.quiz-sidebar,.teacher-sidebar,.admin-sidebar,.staff-academic-sidebar,.permissions-sidebar { width: 100% !important; flex-basis: auto !important; border-right: 0 !important; border-bottom: 1px solid var(--border); }
+  .sidebar-nav,.assignment-nav,.attendance-nav,.progress-nav,.quiz-nav,.teacher-nav,.admin-nav,.staff-nav,.permissions-nav { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px !important; }
+  .nav-item,.assignment-nav-item,.attendance-nav-item,.progress-nav-item,.quiz-nav-item,.teacher-nav-item,.admin-nav-item,.staff-nav-item,.permissions-nav-item { justify-content: center; gap: 5px; padding: 9px 5px !important; font-size: 10px !important; }
+  .nav-icon,.assignment-nav-item b,.attendance-nav-item b,.progress-nav-item b,.quiz-nav-item b,.teacher-nav-item b,.admin-nav-item b,.staff-nav-item b,.permissions-nav-item b { display: none !important; }
+  .sidebar-user-section,.assignment-user-area,.attendance-user-area,.progress-user-area,.quiz-user-area,.teacher-user-area,.admin-user-area,.staff-user-area,.permissions-user-area { margin-top: 12px; }
+  .sidebar-collapse-btn,.attendance-collapse,.progress-collapse,.assignment-collapse,.quiz-collapse,.teacher-collapse,.admin-collapse,.staff-collapse,.permissions-collapse { top: 18px !important; right: 8px !important; left: auto !important; }
+  .sidebar-logo,.attendance-logo,.progress-logo,.assignment-logo,.quiz-logo,.teacher-logo,.admin-logo,.staff-logo,.permissions-logo { padding-right: 38px !important; }
+  .dashboard-topbar,.assignment-topbar,.attendance-topbar,.progress-topbar,.quiz-topbar,.teacher-topbar,.admin-topbar,.staff-topbar,.permissions-topbar { align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+  .breadcrumb,.assignment-breadcrumb,.attendance-breadcrumb,.progress-breadcrumb,.quiz-breadcrumb,.teacher-breadcrumb,.admin-breadcrumb,.staff-breadcrumb,.permissions-breadcrumb { min-width: 0; line-height: 1.5; }
+}

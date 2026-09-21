@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  max-width: none !important;
+  background-color: #f2f5f9;
+}
+
+.smit-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f2f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  box-sizing: border-box;
+}
+
+.smit-card-box {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 530px;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  padding: 44px 44px;
+  box-sizing: border-box;
+}
+
+.smit-logo-wrap {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.smit-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.smit-cap-svg {
+  width: 38px;
+  height: 31px;
+}
+
+.smit-brand-text {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1;
+}
+
+.navy-text {
+  color: #1e3a8a;
+}
+
+.i-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.green-dot {
+  position: absolute;
+  top: -6px;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  background-color: #22c55e;
+  border-radius: 50%;
+}
+
+.smit-sub-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.9px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.portal-sub-heading {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.smit-tabs {
+  display: flex;
+  background-color: #f1f5f9;
+  border-radius: 9px;
+  padding: 5px;
+  margin-bottom: 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.smit-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 11px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+}
+
+.active-tab {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+}
+
+.smit-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-main-title {
+  font-size: 21px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.form-desc {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 22px 0;
+  text-align: left;
+}
+
+.field-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.field-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 7px;
+  text-align: left;
+}
+
+.smit-input-field {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 14.5px;
+  color: #0f172a;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.smit-input-field:focus {
+  border-color: #2563eb;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-container .smit-input-field {
+  padding-right: 42px;
+  width: 100%;
+}
+
+.eye-btn, .cal-icon {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #64748b;
+  user-select: none;
+}
+
+.smit-submit-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s;
+}
+
+.smit-submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.form-error { margin: -4px 0 8px; padding: 9px 11px; border: 1px solid #f2c8d0; border-radius: 7px; background: #fff2f4; color: #c43d55; font-size: 12px; line-height: 1.35; text-align: left; }
+.smit-input-field::placeholder { color: #a2adbb; }
+
+.logout-btn {
+  background-color: #ef4444;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+.stacked-footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.portal-link-text {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.portal-link-text:hover {
+  text-decoration: underline;
+}
+
+.center-back {
+  display: block;
+  text-align: center;
+}
+
+.dash-box {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.dash-role-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 7px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.dash-user {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.dash-desc {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 26px;
+}
+
+.smit-page-wrapper { position: relative; overflow: hidden; background: radial-gradient(circle at 12% 15%, rgba(61, 193, 163, .18), transparent 28%), radial-gradient(circle at 88% 82%, rgba(77, 124, 216, .16), transparent 30%), #f3f7fb; }
+.smit-page-wrapper::before,.smit-page-wrapper::after { position: absolute; width: 230px; height: 230px; border: 1px solid rgba(29, 158, 157, .14); border-radius: 50%; content: ''; }
+.smit-page-wrapper::before { top: -110px; left: -90px; box-shadow: 0 0 0 22px rgba(29, 158, 157, .04), 0 0 0 44px rgba(29, 158, 157, .025); }
+.smit-page-wrapper::after { right: -120px; bottom: -120px; border-color: rgba(77, 124, 216, .14); box-shadow: 0 0 0 22px rgba(77, 124, 216, .04), 0 0 0 44px rgba(77, 124, 216, .025); }
+.smit-card-box { position: relative; z-index: 1; max-width: 510px; border: 1px solid rgba(215, 225, 236, .9); border-radius: 18px; box-shadow: 0 24px 70px rgba(31, 57, 86, .12); }
+.smit-brand-row { margin-bottom: 10px; }.smit-logo-wrap { margin-bottom: 30px; }.smit-brand-text { letter-spacing: -1.3px; }.portal-sub-heading { color: #1d9e9d; }
+.smit-input-field { background: #fbfdff; }.smit-input-field:focus { border-color: #36ad91; box-shadow: 0 0 0 4px rgba(54, 173, 145, .12); }.smit-submit-btn { background: linear-gradient(135deg, #2c9e86, #3177c8); box-shadow: 0 10px 22px rgba(49, 119, 200, .2); }.smit-submit-btn:hover { background: linear-gradient(135deg, #238d77, #285faa); transform: translateY(-1px); }
+@media (max-width: 560px) { .smit-page-wrapper { padding: 18px 12px; }.smit-card-box { padding: 30px 20px; border-radius: 14px; }.smit-brand-text { font-size: 30px; }.form-desc { font-size: 13px; }.smit-tab { padding: 10px 6px; font-size: 13px; } }
