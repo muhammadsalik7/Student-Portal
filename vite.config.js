@@ -5,11 +5,11 @@ import reactCompiler from 'babel-plugin-react-compiler'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Student-Portal-/',
+  base: '/',
   plugins: [
     react(),
-    babel({ 
-      plugins: [reactCompiler] 
+    babel({
+      plugins: [reactCompiler]
     })
   ],
 })
