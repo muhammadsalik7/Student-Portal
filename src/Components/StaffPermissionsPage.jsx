@@ -4,10 +4,10 @@ import PortalLogo from './PortalLogo.jsx';
 
 const recordsByPage = {
   Attendance: [
-    { name: 'Muhammad Rehan', id: '493853', batch: 'MWA Batch-20', status: 'Active', time: '09:02 AM' },
-    { name: 'Ayesha Khan', id: '493854', batch: 'MWA Batch-20', status: 'Active', time: '09:05 AM' },
-    { name: 'Hamza Ali', id: '493855', batch: 'MWA Batch-20', status: 'Inactive', time: '-' },
-    { name: 'Sara Ahmed', id: '493856', batch: 'MWA Batch-20', status: 'Active', time: '09:11 AM' }
+    { name: 'Muhammad Salik', id: '445690', batch: 'MWA Batch-20', status: 'Active', time: '09:02 AM' },
+    { name: 'basit Khan', id: '445680', batch: 'MWA Batch-20', status: 'Active', time: '09:05 AM' },
+    { name: ' Ali', id: '493812', batch: 'MWA Batch-20', status: 'Inactive', time: '-' },
+    { name: ' Ahmed', id: '493856', batch: 'MWA Batch-20', status: 'Active', time: '09:11 AM' }
   ],
   Assignment: [
     { title: 'Admin Panel Dashboard', module: 'Modern Web App', due: 'September 28, 2026', status: 'Approved' },

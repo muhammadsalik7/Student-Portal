@@ -37,7 +37,7 @@ export default function Progress({ activeTab = 'Progress', onNavigate, onLogout 
         </div>
         <div className="progress-user-area">
           <button type="button" className="progress-user-trigger" onClick={() => setShowProfileMenu((visible) => !visible)}>
-            <span className="progress-avatar">MR</span><span><strong>Muhammad Rehan</strong><small>Student</small></span><em>^</em>
+            <span className="progress-avatar">MS</span><span><strong>Muhammad Salik</strong><small>Student</small></span><em>^</em>
           </button>
           {showProfileMenu && <div className="progress-user-menu">
             <button type="button" onClick={() => { setShowProfile(true); setShowProfileMenu(false); }}><b>PR</b> Profile</button>
@@ -70,7 +70,7 @@ export default function Progress({ activeTab = 'Progress', onNavigate, onLogout 
         </section>
       </main>
 
-      {showProfile && <div className="progress-modal" onClick={() => setShowProfile(false)}><section onClick={(event) => event.stopPropagation()}><div className="progress-avatar large">MR</div><small>Student profile</small><h2>Muhammad Rehan</h2><p>Student ID: 493853</p><p>Modern Web Application Development</p><button type="button" onClick={() => setShowProfile(false)}>Close</button></section></div>}
+      {showProfile && <div className="progress-modal" onClick={() => setShowProfile(false)}><section onClick={(event) => event.stopPropagation()}><div className="progress-avatar large">MS</div><small>Student profile</small><h2>Muhammad Salik</h2><p>Student ID: 445690</p><p>Modern Web Application Development</p><button type="button" onClick={() => setShowProfile(false)}>Close</button></section></div>}
     </div>
   );
 }

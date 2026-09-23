@@ -7,7 +7,7 @@ const pageData = {
     title: 'Attendance Overview',
     subtitle: 'Monitor attendance across the active batch.',
     stats: [['148', 'Total Students'], ['134', 'Present Today'], ['90%', 'Average Attendance']],
-    rows: [['Muhammad Rehan', '493853', 'MWA Batch-20', 'Active', '09:02 AM'], ['Ayesha Khan', '493854', 'MWA Batch-20', 'Active', '09:05 AM'], ['Hamza Ali', '493855', 'MWA Batch-20', 'Inactive', '-'], ['Sara Ahmed', '493856', 'MWA Batch-20', 'Active', '09:11 AM']],
+    rows: [['Muhammad Salik', '445690', 'MWA Batch-20', 'Active', '09:02 AM'], ['basit Khan', '445680', 'MWA Batch-20', 'Active', '09:05 AM'], [' Ali', '493812', 'MWA Batch-20', 'Inactive', '-'], [' Ahmed', '493856', 'MWA Batch-20', 'Active', '09:11 AM']],
   },
   Assignment: {
     title: 'Assignment Management',
@@ -72,7 +72,7 @@ export default function StaffAcademicPage({ role = 'teacher', page, onNavigate, 
         <div className="staff-user-area">
           <button type="button" className="staff-user-trigger" onClick={() => setShowProfileMenu((visible) => !visible)}>
             <span className="staff-avatar">{isAdmin ? 'AD' : 'TR'}</span>
-            <span><strong>{isAdmin ? 'Admin Rehan' : 'Teacher Rehan'}</strong><small>{isAdmin ? 'Super Admin' : 'Instructor'}</small></span><em>^</em>
+            <span><strong>{isAdmin ? 'Admin Salik' : 'Teacher Salik'}</strong><small>{isAdmin ? 'Super Admin' : 'Instructor'}</small></span><em>^</em>
           </button>
           {showProfileMenu && <div className="staff-user-menu"><button type="button"><b>PR</b> Profile</button><button type="button" onClick={() => setDarkMode((enabled) => !enabled)}><b>{darkMode ? 'LM' : 'DM'}</b> {darkMode ? 'Light mode' : 'Dark mode'}</button><button type="button" className="logout-action" onClick={onLogout}><b>LO</b> Logout</button></div>}
         </div>

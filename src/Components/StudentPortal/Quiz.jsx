@@ -4,11 +4,11 @@ import PortalLogo from '../PortalLogo.jsx';
 
 const menuItems = [['Dashboard', 'DB'], ['Progress', 'PR'], ['Attendance', 'AT'], ['Assignment', 'AS'], ['Quiz', 'QU']];
 const quizRows = [
-  ['JavaScript (Quiz-3)', 'Modern Front-End Development', '40', '1/3', '65%', 'Pass'],
-  ['JavaScript (Quiz-1)', 'Modern Front-End Development', '40', '1/3', '70%', 'Pass'],
-  ['CSS Quiz', 'Front-End Development', '40', '1/3', '28%', 'Fail'],
-  ['HTML Quiz', 'Web Designing', '40', '2/3', '50%', 'Pass'],
-  ['React Quiz', 'Modern Front-End Development', '40', '1/3', '92%', 'Pass']
+  ['JavaScript (Quiz-3)', 'Modern Front-End Development', '40', '1/3', '73%', 'Pass'],
+  ['JavaScript (Quiz-1)', 'Modern Front-End Development', '40', '1/3', '78%', 'Pass'],
+  ['CSS Quiz', 'Front-End Development', '40', '1/3', '85%', 'Pass'],
+  ['HTML Quiz', 'Web Designing', '40', '2/3', '80%', 'Pass'],
+  ['JavaScript (Quiz-2)', 'Modern Front-End Development', '40', '1/3', '68%', 'fail']
 ];
 
 export default function Quiz({ onNavigate, onLogout }) {
@@ -44,8 +44,8 @@ export default function Quiz({ onNavigate, onLogout }) {
 
         <div className="quiz-user-area">
           <button type="button" className="quiz-user-trigger" onClick={() => setShowProfileMenu((visible) => !visible)}>
-            <span className="quiz-avatar">MR</span>
-            <span><strong>Muhammad Rehan</strong><small>Student</small></span>
+            <span className="quiz-avatar">MS</span>
+            <span><strong>Muhammad Salik</strong><small>Student</small></span>
             <em>^</em>
           </button>
           {showProfileMenu && (
@@ -114,7 +114,7 @@ export default function Quiz({ onNavigate, onLogout }) {
         </section>
       </main>
 
-      {showProfile && <div className="quiz-modal" onClick={() => setShowProfile(false)}><section onClick={(event) => event.stopPropagation()}><div className="quiz-avatar large">MR</div><small>Student profile</small><h2>Muhammad Rehan</h2><p>Student ID: 493853</p><p>Modern Web Application Development</p><button type="button" onClick={() => setShowProfile(false)}>Close</button></section></div>}
+      {showProfile && <div className="quiz-modal" onClick={() => setShowProfile(false)}><section onClick={(event) => event.stopPropagation()}><div className="quiz-avatar large">MS</div><small>Student profile</small><h2>Muhammad Salik</h2><p>Student ID: 445690</p><p>Modern Web Application Development</p><button type="button" onClick={() => setShowProfile(false)}>Close</button></section></div>}
     </div>
   );
 }

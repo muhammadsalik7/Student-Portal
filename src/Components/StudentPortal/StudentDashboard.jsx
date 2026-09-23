@@ -43,8 +43,8 @@ export default function StudentDashboard({ initialTab = 'Dashboard', onNavigate,
     if (activeTab === 'Dashboard') return null;
     const details = {
       Progress: ['Course Progress', 'Modern Web Application Development', '74% completed'],
-      Attendance: ['Attendance', '84 / 138 classes attended', 'Current attendance: 61%'],
-      Assignment: ['Assignments', '6 of 13 assignments completed', 'Next submission: Friday'],
+      Attendance: ['Attendance', '130/ 138 classes attended', 'Current attendance: 94%'],
+      Assignment: ['Assignments', '12 of 13 assignments completed', 'Next submission: Friday'],
       Quiz: ['Quizzes', 'No upcoming quizzes', 'Keep checking your course schedule']
     };
     const [title, value, note] = details[activeTab];
@@ -80,9 +80,9 @@ export default function StudentDashboard({ initialTab = 'Dashboard', onNavigate,
             className="user-profile-trigger"
             onClick={() => setShowProfileMenu((prev) => !prev)}
           >
-            <div className="user-avatar">MR</div>
+            <div className="user-avatar">MS</div>
             <div className="user-info-text">
-              <span className="user-name">Muhammad Rehan</span>
+              <span className="user-name">Muhammad Salik</span>
               <span className="user-role">Student</span>
             </div>
             <span className="profile-chevron">^</span>
@@ -114,7 +114,7 @@ export default function StudentDashboard({ initialTab = 'Dashboard', onNavigate,
 
         <section className="content-panel analytics-card"><div className="panel-heading"><div><p className="eyebrow">Course analytics</p><h2>Learning Activity</h2></div><div className="chart-controls"><button type="button" className={chartRange === 'weekly' ? 'active' : ''} onClick={() => { setChartRange('weekly'); setSelectedChartPoint(3); }}>Weekly</button><button type="button" className={chartRange === 'monthly' ? 'active' : ''} onClick={() => { setChartRange('monthly'); setSelectedChartPoint(8); }}>Monthly</button></div></div><div className="analytics-summary"><strong>{chartData[selectedChartPoint]}%</strong><span>{chartRange === 'weekly' ? 'Thursday activity' : 'September activity'}</span><span className="graph-legend"><i></i> Completion score</span></div><div className="analytics-chart">{chartData.map((value, index) => <button type="button" className={`analytics-column ${selectedChartPoint === index ? 'selected' : ''}`} key={`${chartLabels[index]}-${value}`} onClick={() => setSelectedChartPoint(index)}><span>{value}%</span><div className="analytics-bar" style={{ height: `${value}%` }}></div><small>{chartLabels[index]}</small></button>)}</div></section></div><aside className="content-panel schedule-panel"><div className="panel-heading"><div><p className="eyebrow">Weekly timetable</p><h2>Class Schedule</h2></div><span className="calendar-icon">CAL</span></div><div className="schedule-days">{['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, index) => <button type="button" className={`${selectedScheduleDay === index ? 'selected-day ' : ''}${index === 1 || index === 3 || index === 5 ? 'class-day' : ''}`} key={day} onClick={() => setSelectedScheduleDay(index)}><span>{day}</span><em>{20 + index}</em></button>)}</div><div className="schedule-tabs">{['Assignments', 'Quizzes', 'Events'].map((tab) => <button type="button" className={scheduleTab === tab ? 'selected' : ''} key={tab} onClick={() => setScheduleTab(tab)}>{tab}</button>)}</div><p className="empty-schedule">{scheduleTab === 'Assignments' && 'No upcoming assignments'}{scheduleTab === 'Quizzes' && 'No upcoming quizzes'}{scheduleTab === 'Events' && `No events on ${['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][selectedScheduleDay]}`}</p></aside></div> : renderTabContent()}
       </main>
-      {showProfile && <div className="profile-modal-overlay" onClick={() => setShowProfile(false)}><section className="profile-modal-box" onClick={(event) => event.stopPropagation()}><div className="modal-avatar">MR</div><p className="eyebrow">Student profile</p><h2>Muhammad Rehan</h2><p>Student ID: 493853</p><p>Modern Web Application Development</p><button type="button" className="close-modal-btn" onClick={() => setShowProfile(false)}>Close</button></section></div>}
+      {showProfile && <div className="profile-modal-overlay" onClick={() => setShowProfile(false)}><section className="profile-modal-box" onClick={(event) => event.stopPropagation()}><div className="modal-avatar">MS</div><p className="eyebrow">Student profile</p><h2>Muhammad Salik</h2><p>Student ID: 445690</p><p>Modern Web Application Development</p><button type="button" className="close-modal-btn" onClick={() => setShowProfile(false)}>Close</button></section></div>}
     </div>
   );
 }

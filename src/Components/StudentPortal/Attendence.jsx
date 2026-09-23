@@ -62,7 +62,7 @@ export default function Attendence({ onNavigate, onLogout }) {
           <nav className="attendance-nav">{menuItems.map(([label, icon]) => <button type="button" key={label} className={`attendance-nav-item ${label === 'Attendance' ? 'active' : ''}`} onClick={() => navigate(label)}><b>{icon}</b>{label}</button>)}</nav>
         </div>
         <div className="attendance-user-area">
-          <button type="button" className="attendance-user" onClick={() => setShowProfileMenu((visible) => !visible)}><span className="attendance-avatar">MR</span><span><strong>Muhammad Rehan</strong><small>Student</small></span><em>^</em></button>
+          <button type="button" className="attendance-user" onClick={() => setShowProfileMenu((visible) => !visible)}><span className="attendance-avatar">MS</span><span><strong>Muhammad Salik</strong><small>Student</small></span><em>^</em></button>
           {showProfileMenu && <div className="attendance-menu"><button type="button" onClick={() => { setShowProfile(true); setShowProfileMenu(false); }}><b>PR</b> Profile</button><button type="button" onClick={() => setDarkMode((enabled) => !enabled)}><b>{darkMode ? 'LM' : 'DM'}</b> {darkMode ? 'Light mode' : 'Dark mode'}</button><button type="button" className="logout" onClick={onLogout}><b>LO</b> Logout</button></div>}
         </div>
       </aside>
@@ -77,7 +77,7 @@ export default function Attendence({ onNavigate, onLogout }) {
         <section className="attendance-records"><div className="records-heading"><div><p className="attendance-eyebrow">Class history</p><h2>Attendance Records</h2></div><div className="record-controls"><select value={month} onChange={(event) => setMonth(event.target.value)} aria-label="Select month"><option>September 2026</option><option>August 2026</option><option>July 2026</option></select><div className="filter-buttons">{['All', 'Present', 'Absent'].map((filter) => <button type="button" className={statusFilter === filter ? 'active' : ''} key={filter} onClick={() => setStatusFilter(filter)}>{filter}</button>)}</div></div></div><div className="record-table"><div className="record-table-head"><span>Class</span><span>Date</span><span>Status</span></div>{filteredRows.map(([number, date, status, statusClass]) => <button type="button" className="record-row" key={`${month}-${number}`} onClick={() => alert(`${date}: ${status}`)}><span>{number}</span><span>{date}</span><span className={statusClass}>{status}</span></button>)}{filteredRows.length === 0 && <p className="no-records">No attendance records found.</p>}</div><p className="record-note">Showing {filteredRows.length} records for {month}</p></section>
       </main>
 
-      {showProfile && <div className="attendance-modal" onClick={() => setShowProfile(false)}><section onClick={(event) => event.stopPropagation()}><div className="attendance-avatar large">MR</div><small>Student profile</small><h2>Muhammad Rehan</h2><p>Student ID: 493853</p><p>Modern Web Application Development</p><button type="button" onClick={() => setShowProfile(false)}>Close</button></section></div>}
+      {showProfile && <div className="attendance-modal" onClick={() => setShowProfile(false)}><section onClick={(event) => event.stopPropagation()}><div className="attendance-avatar large">MS</div><small>Student profile</small><h2>Muhammad Salik</h2><p>Student ID: 445690</p><p>Modern Web Application Development</p><button type="button" onClick={() => setShowProfile(false)}>Close</button></section></div>}
     </div>
   );
 }

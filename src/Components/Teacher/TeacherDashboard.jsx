@@ -26,8 +26,8 @@ export default function TeacherDashboard({ onNavigate, onLogout }) {
 
         <div className="teacher-user-area">
           <button type="button" className="teacher-user-trigger" onClick={() => setShowProfileMenu((visible) => !visible)}>
-            <span className="teacher-avatar">TR</span>
-            <span><strong>Teacher Rehan</strong><small>Instructor</small></span>
+            <span className="teacher-avatar">TS</span>
+            <span><strong>Teacher Salik</strong><small>Instructor</small></span>
             <em>^</em>
           </button>
           {showProfileMenu && (

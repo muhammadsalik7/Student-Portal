@@ -26,8 +26,8 @@ export default function AdminDashboard({ onNavigate, onLogout }) {
 
         <div className="admin-user-area">
           <button type="button" className="admin-user-trigger" onClick={() => setShowProfileMenu((visible) => !visible)}>
-            <span className="admin-avatar">AD</span>
-            <span><strong>Admin Rehan</strong><small>Super Admin</small></span>
+            <span className="admin-avatar">AS</span>
+            <span><strong>Admin Salik</strong><small>Head Admin</small></span>
             <em>^</em>
           </button>
           {showProfileMenu && (

@@ -95,9 +95,9 @@ export default function Assignment({ onNavigate, onLogout }) {
 
         <div className="assignment-user-area">
           <button type="button" className="assignment-user-trigger" onClick={() => setShowProfileMenu((visible) => !visible)}>
-            <span className="assignment-avatar">MR</span>
+            <span className="assignment-avatar">MS</span>
             <span>
-              <strong>Muhammad Rehan</strong>
+              <strong>Muhammad Salik</strong>
               <small>Student</small>
             </span>
             <em>^</em>
@@ -176,10 +176,10 @@ export default function Assignment({ onNavigate, onLogout }) {
       {showProfile && (
         <div className="assignment-modal" onClick={() => setShowProfile(false)}>
           <section onClick={(event) => event.stopPropagation()}>
-            <div className="assignment-avatar large">MR</div>
+            <div className="assignment-avatar large">MS</div>
             <small>Student profile</small>
-            <h2>Muhammad Rehan</h2>
-            <p>Student ID: 493853</p>
+            <h2>Muhammad Salik</h2>
+            <p>Student ID: 445690</p>
             <p>Modern Web Application Development</p>
             <button type="button" onClick={() => setShowProfile(false)}>Close</button>
           </section>
